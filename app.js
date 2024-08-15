@@ -2,7 +2,7 @@ const word_el = document.getElementById("kelimeler");
 const correctLetters = [`a`, `r`, `m`,`u`,`t`]; 
 const wrongLetters = [];
 
-    // JSON içerisinden kelime seçme
+
 function randomword() { 
     return new Promise((resolve, reject) => {
         let words = new XMLHttpRequest();
@@ -18,8 +18,7 @@ function randomword() {
             } else {
                 reject("Kelimeler Yüklenemedi.");
             }
-        };
-        
+        }; 
         words.send();
     });
 }
@@ -33,20 +32,12 @@ function displayword(){
                 </div>
             `).join('')}
         `;
-        
         const i = word_el.textContent.replace(/\n/g, '').replace(/\s+/g, '');
         if (i === selectedword){
-           const alert = document.createElement("div");
-           alert.className = "alert alert-success";
-           alert.innerHTML = `Kelimeyi Doğru Bildiniz.`
-            document.querySelectorAll(".mesaj")[0].appendChild(alert);
-            setTimeout(function(){
-                alert.remove();
-            },2000);
+            //Alert
+           Alert.alertmessage("Kelimeyi Doğru Bildiniz.","alert alert-success");
         }
-        
         // console.log(word_el.textContent.replace(/\n/g, '').replace(/\s+/g, ''));
-        
     }).catch(error => {
         console.error(error);
     });
