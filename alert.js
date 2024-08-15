@@ -9,5 +9,4 @@ class Alert {
             alert.remove();
          },3000);
     }
-
 }
