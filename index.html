@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adam Asmaca</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <h1>ADAM ASMACA</h1>
     <p>Harf Girerek Başlayabilirsiniz</p>
-    <div class="mesaj">
-
-    </div>
-    <div class="container">
-        <svg height="250" width="250" class="grafik">
-            <!-- Masa -->
-            <line x1="130px" y1="20px" x2="50px" y2="20px"/>
-            <line x1="130px" y1="20px" x2="130px" y2="60px"/>
-            <line x1="50px" y1="20px" x2="50px" y2="250px"/>
-            <line x1="10px" y1="250px" x2="90px" y2="250px"/>
-            <!-- Kafa -->
-             <circle cx="130" cy="80" r="20px" class="item"/>
-             <!-- Gövde -->
-            <line x1="130px" y1="100px" x2="130px" y2="170px" class="item"/>
-            <!-- Kollar -->
-            <line x1="130px" y1="120px" x2="100px" y2="100px" class="item"/>
-            <line x1="130px" y1="120px" x2="160px" y2="100px" class="item"/>
-            <!-- Bacaklar -->
-            <line x1="130px" y1="170px" x2="100px" y2="190px" class="item"/>
-            <line x1="130px" y1="170px" x2="160px" y2="190px" class="item"/>
-        </svg>
-        <div id="hatali__kelimeler">
-
-        </div>
-        <div id="kelimeler">
-            <!-- <div class="letter">J</div>
-            <div class="letter">A</div>
-            <div class="letter">V</div>
-            <div class="letter">A</div> -->
-        
-        </div>
+    <div class="mesaj"></div>
+    <div id="game" class="container">
+      <svg height="250" width="250" class="grafik">
+        <!-- Masa -->
+        <line x1="130px" y1="20px" x2="50px" y2="20px" />
+        <line x1="130px" y1="20px" x2="130px" y2="60px" />
+        <line x1="50px" y1="20px" x2="50px" y2="250px" />
+        <line x1="10px" y1="250px" x2="90px" y2="250px" />
+        <!-- Kafa -->
+        <circle cx="130" cy="80" r="20px" class="item" />
+        <!-- Gövde -->
+        <line x1="130px" y1="100px" x2="130px" y2="170px" class="item" />
+        <!-- Kollar -->
+        <line x1="130px" y1="120px" x2="100px" y2="100px" class="item" />
+        <line x1="130px" y1="120px" x2="160px" y2="100px" class="item" />
+        <!-- Bacaklar -->
+        <line x1="130px" y1="170px" x2="100px" y2="190px" class="item" />
+        <line x1="130px" y1="170px" x2="160px" y2="190px" class="item" />
+      </svg>
+      <div id="hatali__kelimeler"></div>
+      <div id="kelimeler">
+      </div>
     </div>
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <!-- Modal -->
+    <div class="modal fade" id="customModal" tabindex="-1" 
+    aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Oyun Bitti</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Maalesef kelimeyi yanlış bildin. Aşağıdaki düğmeyi tıklayarak kelimeyi görebilirsin.</p>
+            <div class="wrong__p"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary playagain">Yeniden Oyna</button>
+            <button type="button" class="btn btn-danger kelime__gör" data-bs-dismiss="modal">Kelimeyi Gör</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
     <script src="./alert.js"></script>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>

@@ -47,9 +47,6 @@ randomword().then(word => {
     console.error(error);
 });
 
-/* <h3>Hatalı Harfler</h3>
-<span>aaa</span> */
-
 function updatewrongletters(){
     wrongletters__El.innerHTML = `
         ${wrongLetters.length>0? `<h3>Hatalı Harfler</h3>`:``}
@@ -65,8 +62,13 @@ function updatewrongletters(){
         }
     })
 
+    //!             MODAL BUTTONLARI AKTİF EDİLİCEK
+    if(wrongLetters.length === items.length){
+     let showModal = document.getElementById("customModal");
+        const modal = new bootstrap.Modal(showModal);
+        modal.show(); 
+    }
 }
-
 window.addEventListener("keydown", function(e) {
         const letter = e.key.toLowerCase();  
 
