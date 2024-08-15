@@ -22,7 +22,7 @@ body{
     stroke-width: 4px;
 }
 .item{
-    /* display: none; */
+ display: none; 
 }
 
 #hatali-kelimeler{
