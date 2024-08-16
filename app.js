@@ -47,7 +47,7 @@ randomword().then(word => {
     selectedword = word;  
     displayword();  
 }).catch(error => {
-    console.error(error);
+    Game.resetwindow();
 });
 
 function updatewrongletters(){
@@ -93,7 +93,7 @@ function updatewrongletters(){
             selectedword = word;  
             displayword();  
         }).catch(error => {
-            console.error(error);
+            Game.resetwindow();
         });
     
         updatewrongletters(); 
@@ -125,7 +125,5 @@ window.addEventListener("keydown", function(e) {
                wrongLetters.push(letter);
                 updatewrongletters();
             }
-        }
-
-    
+        }   
 });

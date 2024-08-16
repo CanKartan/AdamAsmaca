@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: gray !important;
+    background-color: #F2E8C6 !important;
     color: #fff;
     height: 80vh;
     display: flex;
@@ -16,9 +16,13 @@ body{
     height: 450px;
     width: 450px;
 }
+.baslik{
+    margin-top: 20px;
+    color: #800000 ;
+}
 .grafik{
     fill: transparent;
-    stroke: #fff;
+    stroke: #800000;
     stroke-width: 4px;
 }
 .item{
@@ -39,7 +43,7 @@ right: 30px;
 }
 
 .letter{
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #982B1C;
     font-size: 30px;
     margin:0 3px;
     height: 40px;
