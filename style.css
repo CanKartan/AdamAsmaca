@@ -78,3 +78,6 @@ canvas {
     border: 1px solid green;
     border-radius: 10px;
 }
+#yenidenoyna{
+    z-index: 2 !important;
+}
