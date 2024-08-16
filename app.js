@@ -39,7 +39,9 @@ function displayword() {
 
     const i = word_el.textContent.replace(/\n/g, '').replace(/\s+/g, '');
     if (i.toLowerCase() === selectedword.toLowerCase()) {
-        Alert.alertmessage("Kelimeyi Doğru Bildiniz.","alert alert-success")
+        let winnerscreenalert = document.getElementById("winneralert");
+        winnerscreenalert.classList.remove("btn-display");
+        WINNERSCREEN.startAndStopBubbles();
     }
 }
 
@@ -76,7 +78,6 @@ function updatewrongletters(){
         
         const modal = bootstrap.Modal.getInstance(document.getElementById("customModal"));
         modal.hide(); 
-        //////////////////////////////
         play_again_btn.classList.remove("btn-display");
         play_again_btn.addEventListener("click",function () { 
             Game.resetwindow();

@@ -57,3 +57,24 @@ right: 30px;
 .btn-display{
     display: none !important;
 }
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.winner{
+    background-color: green;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
