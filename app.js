@@ -118,13 +118,15 @@ window.addEventListener("keydown", function(e) {
                 displayword(); 
             }
             else{
-                Alert.alertmessage("Bu Harf Eklendi.","alert alert-danger");
+                Alert.alertmessage("Bu Harfi zaten kullandın.","alert alert-danger");
             }
         }
         else{
             if(!wrongLetters.includes(letter)){
                wrongLetters.push(letter);
                 updatewrongletters();
+            }else{
+                Alert.alertmessage("Bu Harfi zaten kullandın.","alert alert-danger");
             }
         }   
 });
