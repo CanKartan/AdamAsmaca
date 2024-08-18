@@ -10,7 +10,7 @@ Bu proje, kelimeleri JSON formatında çekip bilmeye çalıştığımız eğlenc
 * Ekranda bir kelime belirir ve harf tahminleri yaparak bu kelimeyi bulmaya çalışırsınız.
 * Her doğru tahminde harfler görünür. Yanlış tahminler ise oyunun zorluk seviyesini artırır.
 * Oyunun sonunda, kelimeyi görmek ve oyunu yeniden başlatmak için modaldaki butonları kullanabilirsiniz.
-# Kodlar Master Branch içerisinde
+
 
 ![1](https://github.com/user-attachments/assets/2e8892b8-9b05-4a2d-98e0-27b35d381332)
 ![2](https://github.com/user-attachments/assets/4f2a96af-df19-4b60-a5ff-a27740cff2d2)
